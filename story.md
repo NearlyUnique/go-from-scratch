@@ -1,34 +1,43 @@
-# 1: Hello world.
+# 1: Hello World [hello_world]
 
 ## package main
 - packages
 - console apps (main)
-not java/C# namespaces
+not java/C# namespaces. In go packages are generally smaller
 
 ## import
 Std lib e.g. “fmt”, “encoding/json” “os”
 Imported name last part is the prefix to func or type in package e.g.
-fmt.Println
+`import "fmt"` gives `fmt.Println`
+`import "github.com/pkg/errors"` allows `errors.Wrap(err)`
 
 ## func main
 Not like C/C#/Java
-Int Main(args string) // not this
+`int main(args string)` // not this
+`import "flags"` and or `import "os"` 
 
 ## fmt.Println
-Pascal case for exported entities
+Uppercase first char for exported entities (types, interfaces, consts)
 
 ## go build
+cross compile is easy build defaults to directory name, pay attention to `GOPATH`
+
 go build -o output_name
 `GOOS=linux, darwin, windows`
 `GOARCH=amd64, arm`
 
 ```
+//
 const goosList = "android darwin dragonfly freebsd linux nacl netbsd openbsd plan9 solaris windows zos "
 
 const goarchList = "386 amd64 amd64p32 arm armbe arm64 arm64be ppc64 ppc64le mips mipsle mips64 mips64le mips64p32 mips64p32le ppc s390 s390x sparc sparc64 "
 ```
 
 # 2: Closures
+
+_tool_: `go fmt`
+_tool_: `goimports`
+
 ## Short assignment operator
 `X := rhs`
 Or
