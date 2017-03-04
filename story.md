@@ -1,4 +1,4 @@
-# 1: Hello World [hello_world]
+# 1: hello_world
 
 ## package main
 - packages
@@ -33,12 +33,13 @@ const goosList = "android darwin dragonfly freebsd linux nacl netbsd openbsd pla
 const goarchList = "386 amd64 amd64p32 arm armbe arm64 arm64be ppc64 ppc64le mips mipsle mips64 mips64le mips64p32 mips64p32le ppc s390 s390x sparc sparc64 "
 ```
 
-# 2: Closures
+# 2: loops
 
 _tool_: `go fmt`
 _tool_: `goimports`
 
 ## Short assignment operator
+- declared and not used
 `X := rhs`
 Or
 `var x type`
@@ -60,12 +61,22 @@ C style formatting
 
 # 3: goroutine
 
-Sync Waitgroups
-Waitgroup add
-Waitgroup wait
-Ahhh deadlock!
-Waitgroup done
-closure bug
+iffy
+
+- go keyword
+
+need to wait for goroutine to complete
+
+- sync.WaitGroup
+- struct creation {}
+- WaitGroup add
+- WaitGroup wait
+
+Deadlock! All goroutines are asleep (one 1 the main one)
+
+- WaitGroup done
+- closure bug
+
 Everything happens out-of order, and that’s a good thing - nondeterministic execution of goroutines, a symptom of their concurrency
 
 # 4: Channels

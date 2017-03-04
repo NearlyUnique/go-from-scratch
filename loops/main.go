@@ -9,7 +9,7 @@ func main() {
 	t0 := time.Now()
 	for i := 0; i < 3; i++ {
 		time.Sleep(100 * time.Millisecond)
-		fmt.Printf("Doing work ... %d", i)
+		fmt.Printf("Doing work ... %d\n", i)
 	}
-	fmt.Printf("Took:%v", time.Since(t0))
+	fmt.Printf("Took:%v\n", time.Since(t0))
 }
