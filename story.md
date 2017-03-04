@@ -81,15 +81,22 @@ Everything happens out-of order, and that’s a good thing - nondeterministic ex
 
 # 4: Channels
 
-First bug read from empty chan blocks
-Make(chan string)
-Read and write to chan
-Chan type safety
-Deadlocks
-Sycronised communication across go routines
-Can’t collect return value from goroutine
+The yin to the yang of goroutines is channels
+- create func
+- delete WaitGroup
+cannot return value, execution has moved on, nothing to collect the value
+- make chan
 
-# 5: type range
+channels are typed
+
+- read and write to chan
+comment out write to chan to show deadlock
+
+Synchronised communication across go routines
+- show with logging
+- const
+
+# 5: types
 
 Create type blog
 Create slice blogList
