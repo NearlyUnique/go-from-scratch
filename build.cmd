@@ -1,5 +1,8 @@
-@echo off
 :poor mans build script
+
+@echo off
+setlocal ENABLEDELAYEDEXPANSION
+
 
 if "%1"=="" (
     echo USAGE: build target
@@ -17,9 +20,14 @@ md %DEST%
 pushd %DEST%
 git init
 popd
-copy hello_world %DEST%
-git add .
-git commit -m "."
-git branch part1
-
+set part=0
+for /F "tokens=*" %%A in (index.txt) do (
+    copy %%A %DEST%
+    pushd %DEST%
+    git add .
+    git commit -m "Part !part!: %%A"
+    git branch part!part!
+    set /a part+=1
+    popd
+)
 :END
