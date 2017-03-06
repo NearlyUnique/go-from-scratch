@@ -22,6 +22,11 @@ Uppercase first char for exported entities (types, interfaces, consts)
 ## go build
 cross compile is easy build defaults to directory name, pay attention to `GOPATH`
 
+- go build
+- go run
+- go test
+- go get
+
 go build -o output_name
 `GOOS=linux, darwin, windows`
 `GOARCH=amd64, arm`
@@ -79,7 +84,7 @@ Deadlock! All goroutines are asleep (one 1 the main one)
 
 Everything happens out-of order, and that’s a good thing - nondeterministic execution of goroutines, a symptom of their concurrency
 
-# 4: Channels
+# 4: channels
 
 The yin to the yang of goroutines is channels
 - create func
@@ -96,17 +101,26 @@ Synchronised communication across go routines
 - show with logging
 - const
 
+demonstrate by a wait read and a pre and post write log message
+
 # 5: types
 
 Create type blog
-Create slice blogList
+- type (struct)
+- literal
+- var x Type
+- pass blog to download
+- range expression
+bug: missing `:=` before range
+bug: index,value (`int` is not a `blog`)
+- blogList func
+- trailing comma in multi line literals
+- Blank identifier: If we want to ignore index
+
+# methods
 Receivers
-Range loop over
-!!! Oh wait, incorrect arg (actually it’s type is int as it is index)
 So we can use two args
-Blank identifier: If we want to ignore index
 Function in struct
-Add blog to bloglist
 
 # 6: ish
 

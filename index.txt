@@ -2,4 +2,5 @@ hello_world
 loops
 goroutine
 channels
+types
 select_and_timeout
