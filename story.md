@@ -118,8 +118,7 @@ bug: index,value (`int` is not a `blog`)
 - Blank identifier: If we want to ignore index
 
 # methods
-Receivers
-So we can use two args
+Receivers, like python: syntatic sugar
 Function in struct
 
 # 6: ish
