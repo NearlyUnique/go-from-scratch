@@ -3,4 +3,5 @@ loops
 goroutine
 channels
 types
+methods_and_interface
 select_and_timeout

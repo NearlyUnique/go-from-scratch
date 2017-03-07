@@ -106,28 +106,37 @@ demonstrate by a wait read and a pre and post write log message
 # 5: types
 
 Create type blog
+
 - type (struct)
 - literal
+- slices
 - var x Type
 - pass blog to download
 - range expression
+
 bug: missing `:=` before range
 bug: index,value (`int` is not a `blog`)
 - blogList func
 - trailing comma in multi line literals
 - Blank identifier: If we want to ignore index
 
-# methods
-Receivers, like python: syntatic sugar
-Function in struct
+# 6: methods_and_interface
 
-# 6: ish
+Receivers, like python: syntactic sugar first arg is receiver. not name should be short and never `this` or `self`
+Function attached to struct
 
-Interfaces
-Change the bloglist to a blog collector interface slice
-Create a new collector
+- add receiver `(b blog)` to download
+- interface `downloader`
+- demonstrate interface mismatch `blog does not implement downloader (wrong type for download method)`
+
+Create a new downloader
+
+- pizzaDownloader
+
 But implement wrong arguments
 Fix args
+
+# 7: select_and_timeout
 
 Read just one
 Bring in the random to affect the timeout

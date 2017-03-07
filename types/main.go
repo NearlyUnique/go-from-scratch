@@ -23,7 +23,7 @@ func main() {
 		fmt.Printf("got: %s\n", <-ch)
 	}
 
-	fmt.Printf("Took:%v\n", time.Since(t0))
+	fmt.Printf("Took: %v\n", time.Since(t0))
 }
 
 func download(ch chan string, b blog) {
