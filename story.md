@@ -14,7 +14,7 @@ Imported name last part is the prefix to func or type in package e.g.
 ## func main
 Not like C/C#/Java
 `int main(args string)` // not this
-`import "flags"` and or `import "os"` 
+`import "flags"` and or `import "os"`
 
 ## fmt.Println
 Uppercase first char for exported entities (types, interfaces, consts)
@@ -141,3 +141,15 @@ Fix args
 Read just one
 Bring in the random to affect the timeout
 Select timeout (pizza collector takes less time)
+
+# 8: Real HTTP
+
+# 9: IO Writer - file writer
+- Make a file,
+- append the result each time
+- log the bytes written
+
+# 10: IO Writer - custom writer
+- make an io.Writer
+- Swap it in to the code
+- Implement write method to log data with prefix
